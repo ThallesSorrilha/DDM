@@ -1,0 +1,1 @@
+Lib -> main.dart -> método main -> runApp();
