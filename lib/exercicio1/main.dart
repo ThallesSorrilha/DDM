@@ -1,20 +1,39 @@
-/*
-Modifique o código abaixo para garantir que, se nenhuma entrada for fornecida,
-os atributos recebam um valor padrão:
-*/
-
 import 'dart:io';
 
-void main() {
-  Produto produto = Produto();
-  print('Digite o nome do produto:');
-  produto.nome = stdin.readLineSync();
-  print('Digite o preço do produto:');
-  produto.preco = double.tryParse(stdin.readLineSync() ?? '0');
-  print('Produto: ${produto.nome}, Preço: ${produto.preco}');
+void main() {}
+
+class Retangulo {
+  double _largura;
+  double _altura;
+
+  Retangulo({required double largura, required double altura})
+      : _largura = largura,
+        _altura = altura;
+
+  double get largura => _largura;
+  set largura(double largura) {
+    _largura = largura;
+  }
+
+  double get altura => _altura;
+  set altura(double altura) {
+    _altura = altura;
+  }
 }
 
-class Produto {
-  String? nome = '...';
-  double? preco = 0.0;
+class Pessoa {
+  double _peso;
+  int _idade;
+
+  double get peso => _peso;
+  set peso(double novoPeso) {
+    if (novoPeso > 0) _peso = novoPeso;
+  }
+
+  Pessoa({required double peso, required int idade})
+      : _peso = peso,
+        _idade = idade;
+  set idade(int idade) {
+    if (idade >= 0) _idade = idade;
+  }
 }
