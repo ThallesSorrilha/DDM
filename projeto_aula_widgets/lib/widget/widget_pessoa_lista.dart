@@ -39,13 +39,20 @@ class WidgetPessoaLista extends StatelessWidget {
               title: Text('${pessoas[contador]['nome']}'),
               subtitle: Text('${pessoas[contador]['telefone']}'),
               trailing: SizedBox(
-                width: 200,
+                width: 100,
                 child: Row(
                   children: [
                     WidgetBotaoIcone(
                       Icons.delete,
                       cor: Colors.red,
-                      funcao: ScaffoldMessenger(),
+                      funcao: () {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: const Text('Item excluído!'),
+                            duration: const Duration(seconds: 2),
+                          ),
+                        );
+                      },
                     ),
                     WidgetBotaoIcone(
                       Icons.edit,
