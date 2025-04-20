@@ -12,10 +12,10 @@ class WidgetPessoaLista extends StatelessWidget {
           'https://cdn.pixabay.com/photo/2016/03/31/19/58/avatar-1295429_1280.png',
     },
     {
-      'nome': 'Bruna',
+      'nome': 'Bruno',
       'telefone': '(71)99999-9999',
       'url':
-          'https://cdn.pixabay.com/photo/2021/02/27/16/25/woman-6055084_960_720.jpg',
+          'https://cdn.pixabay.com/photo/2016/04/01/11/25/avatar-1300331_1280.png',
     },
     {
       'nome': 'Alana',
